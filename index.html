@@ -119,6 +119,24 @@
         </header>
       )
 
+const myName= "Madeleine"
+const myNameFormatted= (
+  <main>
+    <div className='main-wrapper'>
+      <p>
+        Prerequisite to get started{' '}
+        <strong>
+          <em>react.js</em>
+        </strong>
+        :
+      </p>
+      <ul>{myName}</ul>
+    </div>
+  </main> 
+
+
+
+)
       // JSX element, main
 const techs = ['HTML', 'CSS', 'JavaScript']
 const techsFormatted= techs.map(tech=> <li key={tech}> {tech} </li>)
@@ -135,8 +153,25 @@ const main = (
       </p>
       <ul>{techsFormatted}</ul>
     </div>
-  </main> s
+  </main> 
 )  
+
+
+const madeleinesInfo= ['Madeleine Belanger', 'Canada', "Software Dev", "Female", "250 857 2308"]
+const madeleineInfo2= madeleinesInfo.slice(1)
+
+const madeleinesInfoDisplayed= (
+  <section> 
+    <h1>{madeleinesInfo[0]} </h1>
+    <h2> {madeleineInfo2} </h2>
+
+  </section>
+
+
+
+)
+
+
       // JSX element, footer
       const footer = (
         <footer>
@@ -152,8 +187,16 @@ const main = (
           {header}
           {main}
           {footer}
+          {myNameFormatted}
+          {madeleinesInfoDisplayed}
         </div>
       )
+
+
+ 
+
+
+
 
       // we render the JSX element using the ReactDOM package
       ReactDOM.render(app, rootElement)
